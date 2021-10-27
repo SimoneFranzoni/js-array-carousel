@@ -33,11 +33,15 @@ const next = document.querySelector('.next');
 
 
 next.addEventListener('click',function(){
-    const++;
-    if(cont )
+     item[cont].classList.remove('active');
+    cont++;
+    if(cont > item.length - 1) cont = 0;
+    item[cont].classList.add('active');
 });
 
 prev.addEventListener('click',function(){
-    const--;
-    if(cont < 0) contatore = item.lenght--;
+    item[cont].classList.remove('active');
+    cont--;
+    if(cont < 0) cont = item.length - 1;
+    item[cont].classList.add('active');
 });
