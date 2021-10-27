@@ -8,7 +8,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .slider{
@@ -53,4 +52,22 @@
 
 .item img{
     width: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+.column img{
+    width: 150px;
+    height: 90px;
+    filter: grayscale(1);
+}
+
+.selected img{ 
+    filter: none;
 }

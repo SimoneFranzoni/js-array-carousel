@@ -25,6 +25,7 @@ const text = [
 */
 
 const item = document.getElementsByClassName('item');  
+const item2 = document.getElementsByClassName('item2')
 
 let cont = 0;
 
@@ -34,14 +35,24 @@ const next = document.querySelector('.next');
 
 next.addEventListener('click',function(){
      item[cont].classList.remove('active');
+     item2[cont].classList.remove('selected');
+
     cont++;
+
     if(cont > item.length - 1) cont = 0;
+
     item[cont].classList.add('active');
+    item2[cont].classList.add('selected');
 });
 
 prev.addEventListener('click',function(){
     item[cont].classList.remove('active');
+    item2[cont].classList.remove('selected');
+
     cont--;
+
     if(cont < 0) cont = item.length - 1;
+
     item[cont].classList.add('active');
+    item2[cont].classList.add('selected');
 });
